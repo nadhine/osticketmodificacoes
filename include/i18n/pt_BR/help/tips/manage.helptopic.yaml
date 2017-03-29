@@ -1,0 +1,77 @@
+---
+help_topic_information:
+  title: Informações do tópico
+  content: >
+    <span class="doc-desc-title"> Tópicos </span>: guia de informações coletadas de usuários e como os Chamados são roteados ou atribuídos.
+topic:
+  title: Nome do tópico
+  content: >
+    Nome exclusivo do tópico.
+status:
+  title: Status
+  content: >
+    Se desativado, este <span class="doc-desc-title"> tópico </span> não estará disponível.
+type:
+  title: Tipo
+  content: >
+    Se um <span class="doc-desc-title"> tópico </span> é rotulado como privada, só estará disponível para agentes de escolher quando agente abre um novo bilhete sob o painel de funcionários.
+parent_topic:
+  title: Tópico Pai
+  content: >
+    Selecione o tópico pai ao qual pertencerá este <span class="doc-desc-title"> tópico </span>. O tópico pai aparecerá primeiro na listagem com este <span class="doc-desc-title"> tópico da ajuda</span> listados atrás do pai.
+custom_form:
+  title: Formulário personalizado
+  content: >
+    Formulários personalizados irão ajudá-lo a adquirir informações mais específicas de usuários que são relevantes para este <span class="doc-desc-title"> tópico da ajuda</span>.
+  links:
+    - 
+      title: Gerenciar Formulários Personalizados
+      href: /scp/forms.php
+priority:
+  title: Prioridade
+  content: >
+    Selecione a prioridade atribuída aos novos Chamados relacionadas a este <span class="doc-desc-title"> tópico </span>. <br><br>Filtros de Chamados pode substituir a prioridade do novo Chamado.
+department:
+  title: Departamento
+  content: >
+    Escolha o departamento ao qual serão encaminhados novos Chamados sob este tópico.
+  links:
+    - 
+      title: Gerenciar departamentos
+      href: /scp/departments.php
+sla_plan:
+  title: Plano de SLA
+  content: >
+    Escolher o plano de SLA  associado a este <span class="doc-desc-title"> tópico</span>. <br><br>Esta selecção irá substituir qualquer plano de SLA do departamento selecionado
+  links:
+    - 
+      title: Gerenciar planos de SLA
+      href: /scp/slas.php
+thank_you_page:
+  title: Página de agradecimento
+  content: >
+    Escolha a página de agradecimento na qual os usuários serão redirecionados após abrir um Chamados sob este <span class="doc-desc-title"> tópico </span>.
+  links:
+    - 
+      title: Gerenciar páginas de agradecimento
+      href: /scp/pages.php
+auto_assign_to:
+  title: Auto-atribuir novos chamados
+  content: >
+    Escolher opcionalmente, um agente ou equipe para atribuir automaticamente Chamados abertos com este <span class="doc-desc-title"> tópico</span> <br><br>os Filtros de Chamados podem substituir a atribuição.
+  links:
+    - 
+      title: Gerenciar as equipes e os funcionários
+      href: /scp/staff.php
+ticket_auto_response:
+  title: Resposta automática do chamado
+  content: >
+    Se marcada, essa configuração irá desativar a auto-resposta para este novo Chamado <span class="doc-desc-title"> tópico</span>. <br><br>Isso substitui a configuração para o <span class="doc-desc-title"> Departamento</span>, bem como configurações <span class="doc-desc-title"> globais de Auto-resposta</span> auto-resposta.
+  links:
+    - 
+      title: Configurações de autoresponder
+      href: /scp/settings.php?t=autoresp
+custom_numbers:
+  title: Números de Chamados Personalizados
+  content: >
+    Selecione "Personalizado" para substituir o formato de número do chamado padrão do sistema de chamados que foram criados com este tópico. Para obter detalhes sobre as configurações, consulte as instruções na área administrativa > Configurações / Chamados.
