@@ -275,11 +275,7 @@ PO-Revision-Date: 2017-01-13 11:03-0500
   'Add New Email Address to Ban List' => 'Adicione Novo Endereço de E-mail à Lista de Bloqueados',
   'Add New FAQ' => 'Adicionar Nova FAQ',
   'Add New Filter' => 'Adicionar Novo Filtro',
-<<<<<<< HEAD
   'Add New Help Topic' => 'Adicionar novo tipo de ocorência',
-=======
-  'Add New Help Topic' => 'Adicionar novo tópico de ocorência',
->>>>>>> a98accd68095e2b155f67f409829f65b24595002
   'Add New Item' => 'Adicionar Novo Item',
   'Add New List Item' => 'Adicionar Novo Item de Lista',
   'Add New Organization' => 'Adicionar Nova Organização',
@@ -382,11 +378,7 @@ PO-Revision-Date: 2017-01-13 11:03-0500
   'All' => 'Todos',
   'All Categories' => 'Todas as Categorias',
   'All Departments' => 'Todos os Departamentos',
-<<<<<<< HEAD
   'All Help Topics' => 'Todos os tipos de ocorrência',
-=======
-  'All Help Topics' => 'Todos os tópicos de ocorrência',
->>>>>>> a98accd68095e2b155f67f409829f65b24595002
   'All Tasks (%s)' => 'Todas as Tarefas (%s)',
   'All Teams' => 'Todas as equipes',
   'All Tickets' => 'Todos os Chamados',
