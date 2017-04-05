@@ -2,7 +2,7 @@
 ticket_activity:
   title: Ativ dos Tickets
   content: >
-    Selecione um intervalo de datas para gerar tanto o gráfico e a tabela (cf. <span class="doc-desc-title">Estatísticas</span>) correspondente a data especificada. O gráfico abaixo sempre mostrará uma visão ampla dos dados do sistema inteiro (ou seja, população). No entanto, você pode navegar através da tabela de <span class="doc-desc-title">Estatísticas</span> abaixo para focar um tema mais restrito do seu interesse (por exemplo, Departamento, Tópicos ou Equipe). Além disso, você pode exportar todos os dados atualmente exibidos na tabela de <span class="doc-desc-title">Estatísticas</span>.
+    Selecione um intervalo de datas para gerar tanto o gráfico e a tabela (cf. <span class="doc-desc-title">Estatísticas</span>) correspondente a data especificada. O gráfico abaixo sempre mostrará uma visão ampla dos dados do sistema inteiro (ou seja, população). No entanto, você pode navegar através da tabela de <span class="doc-desc-title">Estatísticas</span> abaixo para focar um tema mais restrito do seu interesse (por exemplo, Departamento, Ocorrência ou Equipe). Além disso, você pode exportar todos os dados atualmente exibidos na tabela de <span class="doc-desc-title">Estatísticas</span>.
 report_timeframe:
   title: Intervalo de tempo do relatório
   content: >

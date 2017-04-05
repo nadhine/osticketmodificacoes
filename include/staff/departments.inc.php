@@ -4,7 +4,7 @@ if (!defined('OSTADMININC') || !$thisstaff->isAdmin())
 
 $qs = array();
 $sortOptions=array(
-    'name' => 'pid',
+    'name' => 'name',
     'type' => 'ispublic',
     'members'=> 'members_count',
     'email'=> 'email__name',

@@ -130,7 +130,7 @@ ALTER TABLE `%TABLE_PREFIX%department`
 ALTER TABLE `%TABLE_PREFIX%staff`
     ADD `notes` TEXT NULL DEFAULT NULL AFTER `signature`,
     ADD `assigned_only` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' AFTER `onvacation`,
-    ADD `show_assigned_tickets` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' AFTER `assigned_only`,
+    ADD `show_assigned_tickets` TINYINT(1) UNSIGNED NOT NULL DEFAULT '1' AFTER `assigned_only`,
     ADD `timezone_id` INT UNSIGNED NOT NULL DEFAULT '0' AFTER `dept_id`,
     ADD `default_signature_type` ENUM( 'none', 'mine', 'dept' ) NOT NULL DEFAULT 'none' AFTER `auto_refresh_rate`;
 
