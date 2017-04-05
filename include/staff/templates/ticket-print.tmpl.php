@@ -57,7 +57,6 @@ table.custom-data th {
 table.custom-data th,
 table.meta-data th {
     text-align: right;
-    background-color: #ddd;
     padding: 3px 8px;
 }
 table.meta-data td {
@@ -108,7 +107,6 @@ div.hr {
     <div class="hr">&nbsp;</div>
     <table><tr>
         <td class="flush-left"><?php echo (string) $ost->company; ?></td>
-        <td class="flush-right"><?php echo Format::daydatetime(Misc::gmtime()); ?></td>
     </tr></table>
 </htmlpageheader>
 
@@ -130,28 +128,24 @@ div.hr {
 <table class="meta-data" cellpadding="0" cellspacing="0">
 <tbody>
 <tr>
-    <th><?php echo __('Status'); ?></th>
-    <td><?php echo $ticket->getStatus(); ?></td>
-    <th><?php echo __('Name'); ?></th>
+    <th align="left"><?php echo __('Department'); ?></th>
+    <td><?php echo $ticket->getDept(); ?></td>
+    <th align="left"><?php echo __('Name'); ?></th>
     <td><?php echo $ticket->getOwner()->getName(); ?></td>
 </tr>
+
 <tr>
-    <th><?php echo __('Priority'); ?></th>
-    <td><?php echo $ticket->getPriority(); ?></td>
-    <th><?php echo __('Email'); ?></th>
+    <th align="left"></th>
+    <td><?php echo $ticket->getDept2(); ?></td>
+    <th align="left"><?php echo __('Email'); ?></th>
     <td><?php echo $ticket->getEmail(); ?></td>
 </tr>
 <tr>
-    <th><?php echo __('Department'); ?></th>
-    <td><?php echo $ticket->getDept(); ?></td>
-    <th><?php echo __('Phone'); ?></th>
-    <td><?php echo $ticket->getPhoneNumber(); ?></td>
-</tr>
-<tr>
-    <th><?php echo __('Create Date'); ?></th>
+    <th align="left"><?php echo __('Create Date'); ?></th>
     <td><?php echo Format::datetime($ticket->getCreateDate()); ?></td>
-    <th><?php echo __('Source'); ?></th>
-    <td><?php echo $ticket->getSource(); ?></td>
+    <th align="left"><?php echo __('Phone'); ?></th>
+    <td><?php echo $ticket->getPhoneNumber(); ?></td>
+
 </tr>
 </tbody>
 <tbody>
@@ -159,22 +153,10 @@ div.hr {
 </tbody>
 <tbody>
 <tr>
-    <th><?php echo __('Assigned To'); ?></th>
-    <td><?php echo $ticket->getAssigned(); ?></td>
-    <th><?php echo __('Help Topic'); ?></th>
+    <th align="left"><?php echo __('Source'); ?></th>
+    <td><?php echo $ticket->getSource(); ?></td>
+    <th align="left"><?php echo __('Help Topic'); ?></th>
     <td><?php echo $ticket->getHelpTopic(); ?></td>
-</tr>
-<tr>
-    <th></th>
-    <td></td>
-    <th><?php echo __('Last Response'); ?></th>
-    <td><?php echo Format::datetime($ticket->getLastResponseDate()); ?></td>
-</tr>
-<tr>
-    <th><?php echo __('Due Date'); ?></th>
-    <td><?php echo Format::datetime($ticket->getEstDueDate()); ?></td>
-    <th><?php echo __('Last Message'); ?></th>
-    <td><?php echo Format::datetime($ticket->getLastMessageDate()); ?></td>
 </tr>
 </tbody>
 </table>
@@ -191,16 +173,13 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
         continue;
     ?>
         <table class="custom-data" cellspacing="0" cellpadding="4" width="100%" border="0">
-        <tr><td colspan="2" class="headline flush-left"><?php echo $form->getTitle(); ?></th></tr>
         <?php foreach($answers as $a) {
             if (!($v = $a->display())) continue; ?>
             <tr>
-                <th><?php
-    echo $a->getField()->get('label');
-                ?>:</th>
-                <td><?php
-    echo $v;
-                ?></td>
+                <th align="left"><?php echo $a->getField()->get('label');?>:</th>
+                <td><?php echo $v;?></td>
+                <th align="left"></th>
+                <td></td>
             </tr>
             <?php } ?>
         </table>
@@ -209,7 +188,6 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
 } ?>
 
 <!-- Ticket Thread -->
-<h2><?php echo $ticket->getSubject(); ?></h2>
 <div id="ticket_thread">
 <?php
 $types = array('M', 'R');
@@ -252,8 +230,7 @@ if ($thread = $ticket->getThreadEntries($types)) {
 </div>
 
 <p ><?php echo "Resolução: ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________"; ?></p>
-</br>
-</br>
+
 </br>
 </br>
 <h3><?php echo "TERMO DE RESPONSABILIDADE"; ?></h3>
@@ -273,6 +250,6 @@ if ($thread = $ticket->getThreadEntries($types)) {
 </tr>
 </table>
 </br>
-<p><?php echo "Paulista, ___________ de _________________________ de 2017"; ?></p>
+<p align="center"><?php echo "Paulista, ___________ de _________________________ de 2017"; ?></p>
 </body>
 </html>

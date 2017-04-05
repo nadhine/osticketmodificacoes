@@ -462,7 +462,10 @@ implements RestrictedAccess, Threadable {
     function getSubject() {
         return (string) $this->_answers['subject'];
     }
-
+    
+    function getDept2() {
+        return (string) $this->_answers['department2'];
+    }
     /* Help topic title  - NOT object -> $topic */
     function getHelpTopic() {
         if ($this->topic)
