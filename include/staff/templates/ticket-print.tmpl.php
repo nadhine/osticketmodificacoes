@@ -125,38 +125,11 @@ div.hr {
 
 <!-- Ticket metadata -->
 <h1>Chamado #<?php echo $ticket->getNumber(); ?></h1>
-<table class="meta-data" cellpadding="0" cellspacing="0">
+<table class="meta-data" cellpadding="0" cellspacing="0"  width="100%" border="0">
 <tbody>
 <tr>
-    <th align="left"><?php echo __('Department'); ?></th>
+    <th align="left" width="30%"><?php echo __('Department'); ?><?php echo ' :'; ?></th>
     <td><?php echo $ticket->getDept(); ?></td>
-    <th align="left"><?php echo __('Name'); ?></th>
-    <td><?php echo $ticket->getOwner()->getName(); ?></td>
-</tr>
-
-<tr>
-    <th align="left"></th>
-    <td><?php echo $ticket->getDept2(); ?></td>
-    <th align="left"><?php echo __('Email'); ?></th>
-    <td><?php echo $ticket->getEmail(); ?></td>
-</tr>
-<tr>
-    <th align="left"><?php echo __('Create Date'); ?></th>
-    <td><?php echo Format::datetime($ticket->getCreateDate()); ?></td>
-    <th align="left"><?php echo __('Phone'); ?></th>
-    <td><?php echo $ticket->getPhoneNumber(); ?></td>
-
-</tr>
-</tbody>
-<tbody>
-    <tr><td colspan="4" class="spacer">&nbsp;</td></tr>
-</tbody>
-<tbody>
-<tr>
-    <th align="left"><?php echo __('Source'); ?></th>
-    <td><?php echo $ticket->getSource(); ?></td>
-    <th align="left"><?php echo __('Help Topic'); ?></th>
-    <td><?php echo $ticket->getHelpTopic(); ?></td>
 </tr>
 </tbody>
 </table>
@@ -172,20 +145,49 @@ foreach (DynamicFormEntry::forTicket($ticket->getId()) as $form) {
     if (count($answers) == 0)
         continue;
     ?>
-        <table class="custom-data" cellspacing="0" cellpadding="4" width="100%" border="0">
+        <table class="meta-data" cellspacing="0" cellpadding="0" width="100%" border="0">
         <?php foreach($answers as $a) {
             if (!($v = $a->display())) continue; ?>
             <tr>
-                <th align="left"><?php echo $a->getField()->get('label');?>:</th>
+                <th align="left" width="30%"><?php echo $a->getField()->get('label');?>:</th>
                 <td><?php echo $v;?></td>
-                <th align="left"></th>
-                <td></td>
             </tr>
             <?php } ?>
         </table>
     <?php
     $idx++;
 } ?>
+
+<table class="meta-data" cellpadding="0" cellspacing="0"  width="100%" border="0">
+<tbody>
+<tr>
+    <th align="left"><?php echo __('Name'); ?><?php echo ' :'; ?></th>
+    <td><?php echo $ticket->getOwner()->getName(); ?></td>
+</tr>
+<tr>
+    <th align="left"><?php echo __('Email'); ?><?php echo ' :'; ?></th>
+    <td><?php echo $ticket->getEmail(); ?></td>
+</tr>
+<tr>
+    <th align="left" width="30%"><?php echo __('Phone'); ?><?php echo ' :'; ?></th>
+    <td><?php echo $ticket->getPhoneNumber(); ?></td>
+</tr>
+<tr>
+    <th align="left"><?php echo __('Source'); ?><?php echo ' :'; ?></th>
+    <td><?php echo $ticket->getSource(); ?></td>
+</tr>
+<tr>
+    <th align="left"><?php echo __('Create Date'); ?><?php echo ' :'; ?></th>
+    <td><?php echo Format::datetime($ticket->getCreateDate()); ?></td>
+</tr>
+<tr>
+    <th align="left"><?php echo __('Help Topic'); ?><?php echo ' :'; ?></th>
+    <td><?php echo $ticket->getHelpTopic(); ?></td>
+</tr>
+</tbody>
+</table>
+
+
 
 <!-- Ticket Thread -->
 <div id="ticket_thread">
@@ -230,8 +232,6 @@ if ($thread = $ticket->getThreadEntries($types)) {
 </div>
 
 <p ><?php echo "Resolução: ____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________"; ?></p>
-
-</br>
 </br>
 <h3><?php echo "TERMO DE RESPONSABILIDADE"; ?></h3>
 <p ><?php echo "Caso seja solicitada a formatação do equipamento. o solicitante fica ciente que este procedimento apaga definitivamente todos os dados do computador. Por esse termo, assume que foi verificado backup, portanto, responsabiliza-se por toda e qualquer informação removida, incluindo informações de outros perfis do computador."; ?></p>
@@ -249,6 +249,7 @@ if ($thread = $ticket->getThreadEntries($types)) {
 <td><p align="right"><?php echo "Assinatura do Responsável Técnico"; ?></p></td>
 </tr>
 </table>
+</br>
 </br>
 <p align="center"><?php echo "Paulista, ___________ de _________________________ de 2017"; ?></p>
 </body>

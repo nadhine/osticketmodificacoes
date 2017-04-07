@@ -115,7 +115,6 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
     </tbody>
   </table>
 <hr/>
-
   <p class="buttons" style="text-align:center;">
         <input type="button" name="cancel" value="<?php echo __('Cancel'); ?>" onclick="javascript:
             $('.richtext').each(function() {
@@ -124,7 +123,6 @@ if ($info['topicId'] && ($topic=Topic::lookup($info['topicId']))) {
                     redactor.deleteDraft();
             });
             window.location.href='index.php';">
-        <input type="submit" value="<?php echo __('Create Ticket');?>"style="display: none;">
         <input type="submit" value="<?php echo __('Create Ticket');?>">
   </p>
 
